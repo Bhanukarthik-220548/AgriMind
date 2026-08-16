@@ -269,14 +269,14 @@ export default function Dashboard() {
                                             try {
                                                 // We must get the token for the auth header
                                                 const token = localStorage.getItem('token');
-                                                const response = await fetch('http://localhost:5000/api/rag/ask', {
-                                                    method: 'POST',
-                                                    headers: {
-                                                        'Content-Type': 'application/json',
-                                                        'Authorization': `Bearer ${token}`
-                                                    },
-                                                    body: JSON.stringify({ question: ragQuestion })
-                                                });
+                                               const response = await fetch(`${import.meta.env.VITE_API_URL}/rag/ask`, {
+                                                                method: 'POST',
+                                                                headers: {
+                                                                    'Content-Type': 'application/json',
+                                                                    'Authorization': `Bearer ${token}`
+                                                                },
+                                                                body: JSON.stringify({ question: ragQuestion })
+                                                            });
                                                 const data = await response.json();
                                                 if (!response.ok) throw new Error(data.message || 'Failed to get answer');
                                                 answerDiv.innerText = data.answer;
