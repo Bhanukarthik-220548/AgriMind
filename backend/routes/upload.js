@@ -28,8 +28,8 @@ router.post('/', authMiddleware, upload.single('image'), async (req, res) => {
         });
 
         // Call FastAPI
-        const aiResponse = await axios.post(
-            'http://localhost:8000/predict',
+       const aiResponse = await axios.post(
+            'https://agrimind-ai-dslc.onrender.com/predict',
             formData,
             {
                 headers: {
@@ -37,7 +37,6 @@ router.post('/', authMiddleware, upload.single('image'), async (req, res) => {
                 }
             }
         );
-
         // Send AI response back to React
         res.json(aiResponse.data);
 

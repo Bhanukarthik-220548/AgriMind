@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const client = axios.create({
-    baseURL: 'https://agri-mind-q43s.vercel.app/api',
+   baseURL: import.meta.env.VITE_API_URL || 'http://localhost:5000/api',
 });
 // Add an interceptor to automatically add the JWT token to requests
 client.interceptors.request.use(
