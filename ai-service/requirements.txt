@@ -1,0 +1,6 @@
+﻿fastapi
+uvicorn
+tensorflow
+chromadb
+sentence-transformers
+python-multipart

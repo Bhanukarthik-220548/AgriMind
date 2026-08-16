@@ -1,0 +1,49 @@
+# Dependencies
+node_modules/
+venv/
+env/
+.env/
+.venv/
+
+# Python caches
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# Environment variables (Secrets)
+.env
+.env.*
+!.env.example
+
+# Build and Cache
+dist/
+build/
+.vite/
+
+# IDE files
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Generated user data
+backend/uploads/
+ai-service/uploads/
+frontend/uploads/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# ----------------------------------------------------------------------
+# NOTE: The following items are NOT ignored intentionally:
+# - ai-service/rice_disease_model.keras: The main CNN model is ~23MB 
+#   (well under Git's 100MB limit). It is directly required for the 
+#   predict route to function and isn't dynamically downloaded on deploy.
+# - backend/chroma_db/: The RAG database holds pre-populated vector 
+#   embeddings. Since `rag_service.py` simply reads from it and does 
+#   not populate it dynamically at runtime, it must be included for 
+#   the RAG queries to work in a deployment environment.
+# ----------------------------------------------------------------------
