@@ -1,6 +1,6 @@
-﻿fastapi
-uvicorn
+fastapi
+uvicorn[standard]
 tensorflow
-chromadb
-sentence-transformers
+Pillow
+numpy
 python-multipart
