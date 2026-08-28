@@ -4,7 +4,3 @@ tensorflow
 Pillow
 numpy
 python-multipart
-chromadb
-sentence-transformers
-google-genai
-python-dotenv
