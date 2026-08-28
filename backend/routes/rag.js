@@ -11,7 +11,7 @@ router.post('/ask', authMiddleware, async (req, res) => {
     }
 
     try {
-        const aiResponse = await axios.post('https://agrimind-ai-dslc.onrender.com/rag/ask', {
+        const aiResponse = await axios.post('https://agrimind-1-1ihj.onrender.com/rag/ask', {
             question: question
         });
         
